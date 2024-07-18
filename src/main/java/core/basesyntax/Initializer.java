@@ -9,7 +9,7 @@ public class Initializer {
     public static void main(String[] args) {
 
         Figure[] figures = new Figure[6];
-        arrayService.fillingArray(figures);
+        arrayService.fillArray(figures);
         arrayService.drawArrayElements(figures);
     }
 }
