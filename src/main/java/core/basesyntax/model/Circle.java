@@ -1,9 +1,8 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 import static java.lang.Math.PI;
 
 public class Circle extends Figure {
-
     private int radius;
 
     public Circle(String color, int radius) {

@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class RightTriangle extends Figure  {
     private int firstLeg;
