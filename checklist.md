@@ -48,8 +48,8 @@ public class AccauntService {
 }
 ```
 
-#### Al*l magic numbers in your code should be constants.
-Please see [this article](https://mate-academy.github.io/style-guides/java/java.html#s5.2.4-constant-names) to learn about constant f*ields and their naming requirements.
+#### All magic numbers in your code should be constants.
+Please see [this article](https://mate-academy.github.io/style-guides/java/java.html#s5.2.4-constant-names) to learn about constant fields and their naming requirements.
 * Bad example:
 ```
 public class FigureSupplier {
