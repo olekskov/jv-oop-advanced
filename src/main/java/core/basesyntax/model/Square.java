@@ -1,23 +1,25 @@
 package core.basesyntax.model;
 
-public class Square extends Figure {
-    private int height;
+import static java.lang.System.lineSeparator;
 
-    public Square(String color, int hight) {
+public class Square extends Figure {
+    private int side;
+
+    public Square(String color, int side) {
         super(color);
-        this.height = hight;
+        this.side = side;
     }
 
     @Override
     public double getArea() {
-        return Math.pow(height, 2);
+        return Math.pow(side, 2);
     }
 
     @Override
     public void draw() {
         System.out.printf(
                 "Figure: %s, area: %.2f sq. units, height: %d centimeter, color: %s %s",
-                getClass().getSimpleName(), getArea(), height, getColor(), System.lineSeparator());
+                getClass().getSimpleName(), getArea(), side, getColor(), lineSeparator());
     }
 }
 

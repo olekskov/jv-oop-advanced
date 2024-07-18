@@ -1,5 +1,7 @@
 package core.basesyntax.model;
 
+import static java.lang.System.lineSeparator;
+
 public class RightTriangle extends Figure  {
     private int firstLeg;
     private int secondLeg;
@@ -19,7 +21,7 @@ public class RightTriangle extends Figure  {
     public void draw() {
         System.out.printf(
                 "Figure: %s, area: %.2f sq. units, firstLeg: %d centimeter, secondLeg: %d centimeter, color: %s %s",
-                getClass().getSimpleName(), getArea(), firstLeg, secondLeg, getColor(), System.lineSeparator());
+                getClass().getSimpleName(), getArea(), firstLeg, secondLeg, getColor(), lineSeparator());
     }
 }
 
