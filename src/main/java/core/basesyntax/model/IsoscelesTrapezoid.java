@@ -16,13 +16,15 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return (double)((shortSide + longSide) / 2.0) * height;
+        return (double) ((shortSide + longSide) / 2.0) * height;
     }
 
     @Override
     public void draw() {
         System.out.printf(
-                "Figure: %s, area: %.2f sq. units, height: %d centimeter, longSide %d centimeter, shortSide %d centimeter, color: %s %s",
-                getClass().getSimpleName(), getArea(), height, longSide, shortSide, getColor(), lineSeparator());
+                "Figure: %s, area: %.2f sq. units, height: %d centimeter, longSide %d centimeter,"
+                        + " shortSide %d centimeter, color: %s %s",
+                getClass().getSimpleName(), getArea(), height, longSide,
+                shortSide, getColor(), lineSeparator());
     }
 }

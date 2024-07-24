@@ -20,7 +20,8 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.printf(
-                "Figure: %s, area: %.2f sq. units, height: %d centimeter, weight %d centimeter, color: %s %s",
+                "Figure: %s, area: %.2f sq. units, height: %d centimeter, weight %d centimeter, "
+                        + "color: %s %s",
                 getClass().getSimpleName(), getArea(), height, weight, getColor(), lineSeparator());
     }
 }
