@@ -8,8 +8,9 @@ import core.basesyntax.service.FigureSupplier;
 import java.util.Random;
 
 public class Initializer {
-    private static final ColorSupplier colorSupplier = new ColorSupplier(new Random());
-    private static final FigureSupplier figureSupplier = new FigureSupplier(new Random(), colorSupplier);
+    private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier(random);
+    private static final FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
     private static final ArrayService arrayService = new ArrayService(figureSupplier);
 
     public static void main(String[] args) {
