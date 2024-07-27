@@ -1,14 +1,16 @@
 package core.basesyntax.service;
 
-import static core.basesyntax.enums.Color.WHITE;
-
+import core.basesyntax.enums.Color;
 import core.basesyntax.model.Circle;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
 import core.basesyntax.model.Square;
+
 import java.util.Random;
+
+import static core.basesyntax.enums.Color.WHITE;
 
 public class FigureSupplier {
     private static final int FIGURES_COUNT = 4;
@@ -24,18 +26,23 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figure figure;
-        String color = colorService.getRandomColor();
+        Color color = colorService.getRandomColor();
         int figureNumber = random.nextInt(FIGURES_COUNT);
 
         switch (figureNumber) {
-            case 0 -> figure = new IsoscelesTrapezoid(color, getRandomSide(), getRandomSide(),
-                    getRandomSide());
-            case 1 -> figure = new Rectangle(color, getRandomSide(), getRandomSide());
-            case 2 -> figure = new RightTriangle(color, getRandomSide(), getRandomSide());
-            default -> figure = new Square(color, getRandomSide());
+            case 0 -> {
+                return new IsoscelesTrapezoid(color, getRandomSide(), getRandomSide(), getRandomSide());
+            }
+            case 1 -> {
+                return new Rectangle(color, getRandomSide(), getRandomSide());
+            }
+            case 2 -> {
+                return new RightTriangle(color, getRandomSide(), getRandomSide());
+            }
+            default -> {
+                return new Square(color, getRandomSide());
+            }
         }
-        return figure;
     }
 
     private int getRandomSide() {
@@ -43,6 +50,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(WHITE.name(), DEFAULT_RADIUS);
+        return new Circle(WHITE, DEFAULT_RADIUS);
     }
 }

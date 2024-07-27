@@ -1,12 +1,14 @@
 package core.basesyntax.model;
 
+import core.basesyntax.enums.Color;
+
 import static java.lang.System.lineSeparator;
 
 public class Rectangle extends Figure {
     private int height;
     private int weight;
 
-    public Rectangle(String color, int height, int weight) {
+    public Rectangle(Color color, int height, int weight) {
         super(color);
         this.height = height;
         this.weight = weight;

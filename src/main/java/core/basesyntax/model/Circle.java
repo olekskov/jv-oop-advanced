@@ -1,12 +1,14 @@
 package core.basesyntax.model;
 
+import core.basesyntax.enums.Color;
+
 import static java.lang.Math.PI;
 import static java.lang.System.lineSeparator;
 
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(String color, int radius) {
+    public Circle(Color color, int radius) {
         super(color);
         this.radius = radius;
     }

@@ -1,11 +1,13 @@
 package core.basesyntax.service;
 
 import core.basesyntax.model.Figure;
-import java.util.Random;
 
 public class ArrayService {
-    private final FigureSupplier supplier = new FigureSupplier(new Random(),
-            new ColorSupplier(new Random()));
+    private final FigureSupplier figureSupplier;
+
+    public ArrayService(FigureSupplier figureSupplier) {
+        this.figureSupplier = figureSupplier;
+    }
 
     public void drawArrayElements(Figure[] figures) {
         for (Figure figure : figures) {
@@ -16,9 +18,9 @@ public class ArrayService {
     public void fillArray(Figure[] figures) {
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
-                figures[i] = supplier.getRandomFigure();
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = supplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
     }

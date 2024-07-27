@@ -1,16 +1,17 @@
 package core.basesyntax.model;
 
+import core.basesyntax.enums.Color;
 import core.basesyntax.interfaces.AreaCalculator;
 import core.basesyntax.interfaces.Printer;
 
 public abstract class Figure implements AreaCalculator, Printer {
-    private String color;
+    private Color color;
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }

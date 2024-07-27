@@ -1,6 +1,7 @@
 package core.basesyntax.service;
 
 import core.basesyntax.enums.Color;
+
 import java.util.Random;
 
 public class ColorSupplier {
@@ -10,7 +11,7 @@ public class ColorSupplier {
         this.random = random;
     }
 
-    public String getRandomColor() {
-        return String.valueOf(Color.values()[random.nextInt(Color.values().length)]);
+    public Color getRandomColor() {
+        return Color.values()[random.nextInt(Color.values().length)];
     }
 }

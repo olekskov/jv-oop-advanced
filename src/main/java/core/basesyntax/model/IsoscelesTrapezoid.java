@@ -1,5 +1,7 @@
 package core.basesyntax.model;
 
+import core.basesyntax.enums.Color;
+
 import static java.lang.System.lineSeparator;
 
 public class IsoscelesTrapezoid extends Figure {
@@ -7,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int longSide;
     private int shortSide;
 
-    public IsoscelesTrapezoid(String color, int height, int longSide, int shortSide) {
+    public IsoscelesTrapezoid(Color color, int height, int longSide, int shortSide) {
         super(color);
         this.height = height;
         this.longSide = longSide;
